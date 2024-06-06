@@ -44,7 +44,9 @@ bash start.bat install
 
 *Run "setup" in the console on a fresh install, to setup the config*
 
-After this, you can run **bash start.sh start** to start the project.
+After this, you can run
+```bash start.sh start```
+to start the project.
 
 Alternatively you can add an Alias *on Linux*:
 
