@@ -19,10 +19,18 @@ It runs in a **python3 venv**, so the needed Libraries and installation will not
 
 # Installation
 
+**Linux**
 ```
 git clone https://github.com/w0lfzk1n/xMenu
 cd xmenu
 bash start.sh install
+```
+
+**Windows**
+```
+git clone https://github.com/w0lfzk1n/xMenu
+cd xmenu
+bash start.bat install
 ```
 
 *Run "setup" in the console on a fresh install, to setup the config*
