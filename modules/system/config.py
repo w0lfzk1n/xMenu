@@ -464,7 +464,7 @@ def first_setup(CONFIG, MOD, args=[]):
     
     xlog.log_continue(f"{bar}\n\nGreat Job! Now the basics are done. You can now run 'conf' and edit the 'paths' or any other config key as you wish.\n\n")
 
-    if tools.yeasno(MOD, "Do you want to setup the 'as_ext_host' paths too?").ask():
+    if tools.yesno(MOD, "Do you want to setup the 'as_ext_host' paths too?").ask():
         valid_ext_host_paths = []
         while True:
             hostpaths_exthost = tools.create_object(MOD, CONFIG, "arr")
