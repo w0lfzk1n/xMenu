@@ -19,6 +19,10 @@ It runs in a **python3 venv**, so the needed Libraries and installation will not
 
 # Installation
 
+*Install GIT first*
+
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
 **Linux**
 ```
 git clone https://github.com/w0lfzk1n/xMenu
