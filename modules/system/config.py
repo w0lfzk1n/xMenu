@@ -432,7 +432,7 @@ def first_setup(CONFIG, MOD, args=[]):
     CONFIG["paths"]["media"]["core_paths"][default] = core_path
 
     xlog.log_continue(f"{bar}\n\nGreat, you have completed this step, now lets set up some more paths.\n\nThere are 2 types of paths you can save for each host.\n  - 'as_runtime' will be displayed in the most modules when a local path is needed.\n  - 'as_ext_host' -- The paths that can be used, when this host is selected as 'external' destination for 'sftp' or 'rsync'.\n\nLet's first setup the 'as_runtime' paths, here you can save paths to your stuff\n\n")
-    
+    xlog.log_info("Start adding paths to 'as_runtime' and press ENTER if you are done :)")
     valid_paths = []
     while True:
         hostpaths_runtime = tools.create_object(MOD, CONFIG, "arr")
