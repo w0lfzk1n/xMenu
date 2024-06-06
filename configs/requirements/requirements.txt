@@ -1,0 +1,5 @@
+questionary
+pycryptodome
+pillow
+requests
+selenium

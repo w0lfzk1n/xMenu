@@ -1,0 +1,326 @@
+{
+    "dev": {
+        "title": "Dev Commands",
+        "usage": "dev",
+        "is_project": false,
+        "core_modulepack": "projects",
+        "sub_modulepack": "dev",
+        "function_call": "dev",
+        "need_args": false,
+        "args": [],
+        "aliases": [
+            "dev"
+        ],
+        "content": "This is the developer command. This area is for testing and debugging.\n>> You can edit the file to develop new modules.\n>> Usage: 'dev'"
+    },
+    "config": {
+        "title": "Config Editor",
+        "usage": "config",
+        "is_project": false,
+        "core_modulepack": "system",
+        "sub_modulepack": "config",
+        "function_call": "runconfig",
+        "need_args": false,
+        "args": [],
+        "aliases": [
+            "conf",
+            "config"
+        ],
+        "content": "This command allows you to edit the runtime config files.\n>> You can select keys, Add new objects (string with key, only string, array or dict), delete or edit existing objects.\nUsage: config"
+    },
+    "help": {
+        "title": "Help",
+        "usage": "help <op:command>",
+        "is_project": false,
+        "core_modulepack": "utils",
+        "sub_modulepack": "log",
+        "function_call": "log_helppage",
+        "need_args": false,
+        "args": [],
+        "aliases": [
+            "help",
+            "h"
+        ],
+        "content": "This Command shows informations about the commands in this project.\n>> Give a command to see the informations for this command only.\nUsage: help <command>"
+    },
+    "backup": {
+        "title": "Backup",
+        "usage": "backup <op:backup_version>",
+        "is_project": false,
+        "core_modulepack": "utils",
+        "sub_modulepack": "xbackup",
+        "function_call": "backup_project",
+        "need_args": false,
+        "args": [],
+        "aliases": [
+            "bg",
+            "backup"
+        ],
+        "content": "This Command creates a Backup of the entire Project.\nUsage: backup"
+    },
+    "restore": {
+        "title": "Restore",
+        "usage": "restore",
+        "is_project": false,
+        "core_modulepack": "utils",
+        "sub_modulepack": "xrestore",
+        "function_call": "restore_project",
+        "need_args": false,
+        "args": [],
+        "aliases": [
+            "rs",
+            "restore",
+            "restor"
+        ],
+        "content": "This Command allows you to restore from a backup in the 'Backups/' folder.\nUsage: restore"
+    },
+    "setup": {
+        "title": "Config Setup",
+        "usage": "setup",
+        "is_project": false,
+        "core_modulepack": "system",
+        "sub_modulepack": "config",
+        "function_call": "first_setup",
+        "aliases": [
+            "setup",
+            "set",
+            "configsetup"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This is a system module for setting up the config on fresh install.\nUsage: run setup"
+    },
+    "clear": {
+        "title": "Clear",
+        "usage": "clear",
+        "is_project": false,
+        "core_modulepack": "utils",
+        "sub_modulepack": "tools",
+        "function_call": "clear_console",
+        "need_args": false,
+        "args": [],
+        "aliases": [
+            "clear",
+            "cls"
+        ],
+        "content": "This Command clears the console.\nUsage: clear"
+    },
+    "run": {
+        "title": "Run",
+        "usage": "run <command> <op:args>",
+        "is_project": false,
+        "core_modulepack": "system",
+        "sub_modulepack": "run_command",
+        "function_call": "run_command",
+        "aliases": [
+            "run",
+            "r"
+        ],
+        "need_args": true,
+        "args": [
+            "command",
+            "args"
+        ],
+        "content": "This Command runs a command from the command list.\nIt is mostly used to execute the project commands.\nUsage: run <command> <args>"
+    },
+    "reload": {
+        "title": "Reload",
+        "usage": "reload",
+        "is_project": false,
+        "core_modulepack": "utils",
+        "sub_modulepack": "reload",
+        "function_call": "reload",
+        "aliases": [
+            "r",
+            "reload",
+            "relaod"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This util reloads the project when changes are made in the script, without closing the script.\nUsage: reload"
+    },
+    "network": {
+        "title": "Network",
+        "usage": "network",
+        "is_project": false,
+        "core_modulepack": "projects",
+        "sub_modulepack": "network",
+        "function_call": "network",
+        "aliases": [
+            "net",
+            "netw",
+            "network"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This is a Project. Supplies a menu for some network commands like sftp, ssh and other things done in the network.\nUsage: run network"
+    },
+    "listjson": {
+        "title": "ListJson",
+        "usage": "listjson <op:attribut>",
+        "is_project": false,
+        "core_modulepack": "utils",
+        "sub_modulepack": "xjson",
+        "function_call": "list_json",
+        "aliases": [
+            "listjson",
+            "ljson",
+            "lstjson",
+            "listj"
+        ],
+        "need_args": false,
+        "args": [
+            "attribut"
+        ],
+        "content": "This Command lallows you to see the 'runtime-config' that is loaded, (for developer purposes only).\nUsage: listjson <op_Attribute>\nExample: listjson paths"
+    },
+    "rsync": {
+        "title": "Rsync",
+        "usage": "rsync",
+        "is_project": true,
+        "core_modulepack": "projects",
+        "sub_modulepack": "rsync",
+        "function_call": "rsync",
+        "aliases": [
+            "rsync",
+            "rsyn"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This is a Project. Runs a menu for rsync options.\n>> RSYNC is a efficient way to copy/move files. Also allows moving data via network.\nUsage: run rsync"
+    },
+    "ytdl": {
+        "title": "YTDL",
+        "usage": "ytdl <op:url>",
+        "is_project": true,
+        "core_modulepack": "projects",
+        "sub_modulepack": "ytdl",
+        "function_call": "ytdl",
+        "aliases": [
+            "ytdl",
+            "ydown",
+            "ytd"
+        ],
+        "need_args": false,
+        "args": [
+            "url"
+        ],
+        "content": "This is a Project. Downloads Videos from URL/s.\nWorks with youtube, and other websites ;)\n>> Make sure that you have setup the 'ytdl_save_paths' in the 'paths/media' config!\nUsage: run ytdl"
+    },
+    "metadata": {
+        "title": "Metadata",
+        "usage": "metadata",
+        "is_project": true,
+        "core_modulepack": "projects",
+        "sub_modulepack": "metadata_editor",
+        "function_call": "main_menu",
+        "aliases": [
+            "metad",
+            "meta",
+            "metadata"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This project runs a menu that allows you to perform different actions for metadata of videos and images.\n>> Also allows to remove metadata from multiple files at once (blk-remove).\nUsage: run metadata"
+    },
+    "cyberdrop": {
+        "title": "Cyberdrop-dl",
+        "usage": "cyerdrop",
+        "is_project": true,
+        "core_modulepack": "projects",
+        "sub_modulepack": "cyberdrop",
+        "function_call": "modules/projects/cyberDrop/run.bat",
+        "aliases": [
+            "cyberd",
+            "cyberdrop",
+            "cyberdl"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This is a Project. Runs a external Menu for downloading media from sites like simpcity.\nhttps://github.com/Jules-WinnfieldX/CyberDropDownloader/releases\nUsage: run cyberop"
+    },
+    "dupeyeet": {
+        "title": "dupeyeet",
+        "usage": "dupe",
+        "is_project": true,
+        "core_modulepack": "projects",
+        "sub_modulepack": "dupeyeet",
+        "function_call": "dupeyeet",
+        "aliases": [
+            "dupe",
+            "dupeyeet",
+            "dupey"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This is a Project. Runs a menu that let's you scan Mediafiles like Images and Videos in a folder for duplicates and automatically remove them.\nUsage: run dupe"
+    },
+    "mediaconvert": {
+        "title": "Media Convert",
+        "usage": "mediaconvert",
+        "is_project": true,
+        "core_modulepack": "projects",
+        "sub_modulepack": "mediaconvert",
+        "function_call": "mediaconvert",
+        "aliases": [
+            "media",
+            "conv",
+            "convert",
+            "convertmedia",
+            "mediaconv",
+            "mediaconvert"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This is a Project. Runs recursive trough the given folder, looking for *mkv* files, using a FFMPEG Docker Container to convert them into *mp4* files..\nUsage: run mediaconvert"
+    },
+    "blkrename": {
+        "title": "Bulk Renamer",
+        "usage": "blkrename <op:folder_path>",
+        "is_project": true,
+        "core_modulepack": "projects",
+        "sub_modulepack": "blkrename",
+        "function_call": "blkrename",
+        "aliases": [
+            "blkrename",
+            "blkr"
+        ],
+        "need_args": false,
+        "args": [
+            "folder_path"
+        ],
+        "content": "This is a Project that let's you rename all files of a specific type at once, either with a random name or your own (ending with a number).\nUsage: run blkrename <op:/path/to/folder/>"
+    },
+    "cmd": {
+        "title": "Command Execution",
+        "usage": "command",
+        "is_project": false,
+        "core_modulepack": "projects",
+        "sub_modulepack": "admin_command",
+        "function_call": "admin_command",
+        "aliases": [
+            "adm",
+            "cmd"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This is a project that allows you to run saved command in the console, out of the project.\nUsage: run cmd"
+    },
+    "filemanager": {
+        "title": "File and Folder Manager",
+        "usage": "manager",
+        "is_project": false,
+        "core_modulepack": "projects",
+        "sub_modulepack": "filemanager",
+        "function_call": "file_actions",
+        "aliases": [
+            "filemanager",
+            "manager",
+            "manag",
+            "files"
+        ],
+        "need_args": false,
+        "args": [],
+        "content": "This is a project, that allows you to browse trough your data and manage files and folders\nUsage: manager"
+    }
+}
