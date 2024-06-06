@@ -55,7 +55,7 @@ sudo nano /etc/bash.bashrc
 Add at the end of the file:
 
 ```
-alias xmenu="cd /path/to/your/xmenu && bash start.sh start"
+alias xmenu="cd /path/to/your/xMenu && bash start.sh start"
 ```
 
 Reboot and after your should be able to run the project with **xmenu** from the bash console.
