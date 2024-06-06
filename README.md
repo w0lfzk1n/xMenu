@@ -20,7 +20,7 @@ It runs in a **python3 venv**, so the needed Libraries and installation will not
 # Installation
 
 ```
-git clone https://https://github.com/w0lfzk1n/xMenu
+git clone https://github.com/w0lfzk1n/xMenu
 cd xmenu
 bash start.sh install
 ```
