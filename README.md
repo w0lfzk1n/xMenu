@@ -1,6 +1,8 @@
 # xMenu
 Simplify the usage of **headless** Linux machines *(also works on Windows)*
 
+**Project is in Alpha Version!**
+
 First Version of this idea: https://github.com/w0lfzk1n/EzPizMenu
 
 ![xMenu](./images/Main.PNG)
