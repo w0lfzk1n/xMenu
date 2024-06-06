@@ -26,14 +26,14 @@ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 **Linux**
 ```
 git clone https://github.com/w0lfzk1n/xMenu
-cd xmenu
+cd xMenu
 bash start.sh install
 ```
 
 **Windows**
 ```
 git clone https://github.com/w0lfzk1n/xMenu
-cd xmenu
+cd xMenu
 bash start.bat install
 ```
 
