@@ -3,6 +3,11 @@ Simplify the usage of **headless** Linux machines *(also works on Windows)*
 
 **Project is in Alpha Version!**
 
+| Version      | Description     | Release Date     |
+| :-------- | :------- | :------- |
+| `Pinapple` | `First dev version` | 'None' |
+| `Blueb3rry.0.1.0-1` | `First release` | '06.June.2024' |
+
 First Version of this idea: https://github.com/w0lfzk1n/EzPizMenu
 
 ![xMenu](./images/Main.PNG)
