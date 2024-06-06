@@ -327,7 +327,7 @@ def update_secret_phrase(CONFIG, MOD):
     SCRIPT_PATH = CONFIG["core"]["cpaths"]["project_path"]
 
     CONFIG["core"]["coredata"]["secret_phrase"] = tools.generate_random_key()
-    xjson.save_json(SCRIPT_PATH, CONFIG["core"]["cpaths"]["configs"]["core"], CONFIG)
+    xjson.save_config_json(SCRIPT_PATH, CONFIG)
     xlog.log_success("Updated secret phrase.")
     
 def yesno(MOD, text):

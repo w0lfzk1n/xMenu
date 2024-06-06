@@ -1,1 +1,7 @@
-./images/*
+images/*
+UNIX_venv/
+WIN_venv/
+modules/__pycache__/*
+modules/system/__pycache__/*
+modules/projects/__pycache__/*
+modules/utils/__pycache__/*
