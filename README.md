@@ -1,4 +1,6 @@
 
+[![Open in Codespares](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=816813863&ref=main&devcontainer_path=.devcontainer%2Fdevcontainer.json&geo=EuropeWest)
+
 ### Anforderungen 
 
 1. **Dokumentation:**
@@ -30,8 +32,6 @@
     - Reicht eure Dev-Container Erweiterung als Pull Request beim Originalprojekt ein. Versucht, den Pull Request so zu gestalten, dass er akzeptiert wird.
     - Dokumentiert die einzelnen Schritte und die dabei entstandene Kommunikation mit dem Owner des Originalprojektes.
 
-
-[![Open in Codespares](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=816813863&ref=main&devcontainer_path=.devcontainer%2Fdevcontainer.json&geo=EuropeWest)
 
 ### Vorkonfigurationen für das Projekt
 
