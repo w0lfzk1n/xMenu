@@ -11,7 +11,7 @@
     // "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "bash start.sh",
+    "postCreateCommand": "python3 run.py",
 
     // Configure tool-specific properties.
     "customizations": {
@@ -20,6 +20,9 @@
                 "shd101wyy.markdown-preview-enhanced"
             ]
         }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
     },
 
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.

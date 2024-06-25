@@ -129,6 +129,6 @@ def import_modules(SCRIPT_PATH, CONFIG, debug=True):
         xlog.log_info(f"ImportError: {util_import['misc_error'][util]}")
 
     if debug or (util_import["sys_error"] or util_import["misc_error"]):
-        xlog.log_input("Press ENTER to continue. . .")
+        input("Press ENTER to continue. . .")
 
     return util_export
