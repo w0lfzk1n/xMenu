@@ -1,284 +1,161 @@
-# xMenu
-Simplify the usage of **headless** Linux machines *(also works on Windows)*
 
-**Project is in Alpha Version!**
+[
+    ![Open in Remote - Containers](
+        https://xebia.com/wp-content/uploads/2023/11/v1.svg    )
+](
+    https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/ajiiscrezy/xMenu.git
+)
 
-| Version      | Description     | Release Date     |
-| :-------- | :------- | :------- |
-| `Pinapple` | `First dev version` | 'None' |
-| `Blueb3rry.0.1.0-1` | `First release` | '06.June.2024' |
+### Anforderungen 
 
-First Version of this idea: https://github.com/w0lfzk1n/EzPizMenu
-
-![xMenu](./images/Main.PNG)
-
-This project is a simple console that allows you to perform redunant actions on a headless *(console-only)* Linux server, *like a Raspberry Pi*.
-
-At start, the project will import all nessecary Libraries *(python and custom)* into a Variable **MOD** and uses this in the Rest of the project, that means that the modules and script do not need imports.
-
-Aswell, the Configuration files **configs/*.json** are imported into a Variable **CONFIG** and can be used troughout the project too.
-
-All modules are called with **module(MOD, CONFIG, args)**.
-
-It runs in a **python3 venv**, so the needed Libraries and installation will not mess up your machines setup of python <3
-
-# Installation
-
-*Install GIT first*
-
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-
-**Linux**
-```
-git clone https://github.com/w0lfzk1n/xMenu
-cd xMenu
-bash start.sh install
-```
-
-**Windows**
-```
-git clone https://github.com/w0lfzk1n/xMenu
-cd xMenu
-bash start.bat install
-```
-
-*Run "setup" in the console on a fresh install, to setup the config*
-
-After this, you can run
-```bash start.sh start```
-to start the project.
-
-Alternatively you can add an Alias *on Linux*:
-
-```
-sudo nano /etc/bash.bashrc
-```
-
-Add at the end of the file:
-
-```
-alias xmenu="cd /path/to/your/xMenu && bash start.sh start"
-```
-
-Reboot and after your should be able to run the project with **xmenu** from the bash console.
-
-A full documentation can be found below.
-
----
-
-# Disclaimer
-
-This is a *sandbox*. I used it to improve my knowledge of python and finally complete the idea I had 2 years ago.
-
-This project is pretty solid, but there are tons of things that can be done different and better.
-
-For example, you are able to save Password for SSH. These are encrypted before saving them, but this encryption is not very strong, it just prevents the password to be displayed in plain-text if someone checks the file without permission.
-
-If you like this idea/project, feel free to rework some parts or share changes with me. *You can use Pull-Requests*
-
----
-
-# System Commands
-| Name      | Type     | Description                | Usage     |
-| :-------- | :------- | :------------------------- | :------- |
-| `setup` | `system` | Runs the first setup for the config. | *setup* |
-| `config` | `system` | Runs an editor for the config. | *conf*, *config* |
-| `help` | `system` | Displayes the commands and infos in this project. | *help <command>* |
-| `reload` | `system` | Reloads the project, without stopping it. Great if changes where made on the code. | *reload* |
-| `backup` | `system` | Creates a Backup for the project. | *backup* |
-| `restore` | `system` | Restore the project from a Backup. | *restore* |
-| `clear` | `system` | Clears the console. | *clear* |
-| `cmd` | `system` | Let's you run a command in the console outside this project. **Make sure you have setup a host and saved commands to execute** | *clear* |
-
----
-
-# Project Commands
-| Name      | Type     | Description                | Usage     |
-| :-------- | :------- | :------------------------- | :------- |
-| `run` | `projects` | This command is used to run the project modules/scripts. | *run <command> (like ytdl)* |
-| `network` | `projects` | A menu to perform certain network tasks (ping, ssh, sftp, iDrac). | *netw* |
-| `rsync` | `projects` | A menu to perform rsync actions, also allows to select external hosts as destination. | *run rsync* |
-| `ytdl` | `projects` | A menu that allows you to download YouTube and *other* videos from websites. **Make sure 'paths/media/ytdl_save_paths' are setup!** | *run ytdl* |
-| `metadata` | `projects` | A menu to perform actions for video and imagefiles to edit, remove metadata. | *run meta* |
-| `cyberdrop` | `projects` | Launches a external script that allows you to download stuff from sites like *simpcity*. https://github.com/Jules-WinnfieldX/CyberDropDownloader/releases | *run cyberd* |
-| `dupeyeet` | `projects` | A menu to perform scans for Video and Imagefiles, to find and remove duplicates. | *run dupe* |
-| `mediaconvert` | `projects` | A menu that allows you to convert all **mkv** files in a folder to **mp4** using FFMPEG Docker. | *run convert* |
-| `blkrename` | `projects` | A menu that allows you to rename all files of a certain type, with a random or own name. | *run blkr* |
-| `filemanager` | `projects` | A menu that allows you to browse your files/folders and perform actions like *delete, move, copy, rename*. | *run manager* |
-
-![xMenu](./images/Manager.PNG)
-
----
-
-# Developer Commands
-| Name      | Type     | Description                | Usage     |
-| :-------- | :------- | :------------------------- | :------- |
-| `listjson` | `projects` | This command allows you to see the config. | *listjson*, *listjosn core*, *listjson paths* |
-| `dev` | `projects` | This command allows you to run the **modules/projects/dev.py**, which can be used to develop new modules and things. | *dev* |
+1. **Dokumentation:**
+    - Erstellt ein detailliertes `DevContainer_README.md`, das das Projekt erklärt und beschreibt, wie das Repository in einem Dev-Container geöffnet und die Anwendung gestartet wird (idealerweise mit F5).
+    - Die Anleitung sollte so verfasst sein, dass ein neues Teammitglied schnell und effizient in das Projekt einsteigen kann.
+2. **Automatisierte Installation:**
+    - Stellt sicher, dass alle notwendigen externen Abhängigkeiten beim Erstellen des Containers automatisch installiert werden.
+3. **Nützliche Extensions:**
+    - Wählt Extensions aus, die den Entwicklungsprozess unterstützen und vereinfachen. Dokumentiert euren Entscheidungsprozess für die von euch ausgewählten Extensions.
+4. **Debugging-Unterstützung:**
+    - Euer Container sollte die Möglichkeit bieten, das Debugging effizient zu nutzen.
+5. **Datenbankintegration:**
+    - Euer Demo-Projekt sollte eine Datenbankanbindung haben.
+    - Integriert ein Tool zur Überprüfung des Datenbankinhalts.
+6. **Produktionsbereite Container:**
+    - Erstellt Dockerfiles/Docker-Compose Files für den Einsatz in der Produktion.
+7. **Sicheres Handling sensibler Daten:**
+    - Verwendet eine `.env`Datei für Passwörter und sensible Daten (diese Datei darf nicht ins Repository eingecheckt werden). Dokumentiere die notwendige Struktur der  `.env`Datei in einer Datei mit dem Namen `env-schema.txt`. Diese Datei soll ins Repository eingecheckt werden.
+8. **Demodaten:**
+    - Implementiert einen Mechanismus zum Initialisieren der Applikation/Datenbank mit Testdaten.
+9. **Effiziente Alternativlösung:**
+    - Erstellt in einem separaten Branch eine Version eures Projekts, die einen bereits konfigurierten Dev-Container aus eurem Docker-Hub bezieht. Dies ist ideal für Projekte mit vielen Abhängigkeiten. Der Befehl `docker commit` könnte hierbei nützlich sein.
+10. **One-Click Setup:**
+    - Fügt im `README.md` einen Button hinzu, der es ermöglicht, das Repository in einem Dev-Container mit einem Klick zu öffnen.
+        
+        ![2024-03-17 15_35_36-vscode-remote-try-java_README.md at main · seeli-teaching_vscode-remote-try-java.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/fc447b71-8dd4-4788-82ff-d33d9e7142f5/f88152d1-a15c-4901-a383-46b3ff277f8b/2024-03-17_15_35_36-vscode-remote-try-java_README.md_at_main__seeli-teaching_vscode-remote-try-java.png)
+        
+11. **Pull Request:**
+    - Reicht eure Dev-Container Erweiterung als Pull Request beim Originalprojekt ein. Versucht, den Pull Request so zu gestalten, dass er akzeptiert wird.
+    - Dokumentiert die einzelnen Schritte und die dabei entstandene Kommunikation mit dem Owner des Originalprojektes.
 
 
----
+### Vorkonfigurationen für das Projekt
 
-# Detailed documentation
+Um xMenu in deinem Terminal starten zu können, nachdem du das Alias eingerichtet hast, folge diesen Schritten:
 
-## Configs
+1. **Stelle sicher, dass du das Alias hinzugefügt hast**:
+   - Du hast die Zeile `alias xmenu="cd /path/to/your/xMenu && bash start.sh start"` am Ende der Datei `/etc/bash.bashrc` hinzugefügt und die Datei gespeichert.
 
-### core.json
+2. **Lade die Bash-Konfiguration neu**:
+   - Stelle sicher, dass die neue Konfiguration geladen ist, indem du den folgenden Befehl im Terminal ausführst:
+     ```bash
+     source /etc/bash.bashrc
+     ```
 
-```
-{
-    "core": {
-        "default_host": "",      <-- [Default Host to use.]
-        "coredata": {
-            "py_sys_modules": [  <-- [Python libraries to import at start.]
-                "os", <-- [Single library.]
-                {
-                    "namelist": [
-                        "AES"
-                    ],
-                    "from": [
-                        "Crypto.Cipher"
-                    ]
-                } <-- [Import specific from Library (from crypto.Cipher import AES)]
-            ],
-            "secret_phrase": "s02ZTCfSs7dV5VeasdoasgfFsFFyk", <-- [Secret Phrase to encrypt and decrypt strings.]
-            "enc_tag": "ENC-"  <-- [Indicator for Encrypted strings]
-        },
-        "cpaths": {
-            "project_path": "", <-- [Path to the project, leave EMPTY, will be added on start of script!]
-            "configs": { <-- [Paths to the config files]
-                "core": "configs/core.json",
-                "cmd": "configs/cmd.json",
-                "defaults": "configs/defaults.json",
-                "hosts": "configs/hosts.json",
-                "lang": "configs/lang.json",
-                "paths": "configs/paths.json",
-                "wordlist": "configs/wordlist.json"
-            },
-            "module_path": "modules/", <-- [Path to the modules]
-            "data": "data/" <-- [Path for the module data (links for ytdl module)]
-        },
-        "runtime": { <-- [Input keys for exiting something]
-            "exit_keys": [
-                "q",
-                "Q",
-                "quit",
-                "exit",
-                "stop",
-                "x"
-            ]
-        }
-    }
-}
-```
+3. **Starte xMenu**:
+   - Nun solltest du xMenu einfach starten können, indem du im Terminal den Befehl `xmenu` eingibst:
+     ```bash
+     xmenu
+     ```
 
----
+Hier ist eine detaillierte Anleitung zu den Schritten:
 
-### cmd.json
+### Alias hinzufügen
 
-```
-{
-    "dev": { <-- [Command Key (make sure this key is also in the 'aliases') ]
-        "title": "Dev Commands", <-- [Command title]
-        "usage": "dev",  <-- [Visual display of usage]
-        "is_project": false, <-- [If true, needs 'run' in console to exec]
-        "core_modulepack": "projects", <-- [Folder where module is located]
-        "sub_modulepack": "dev", <-- [Filename of module without *.py]
-        "function_call": "dev", <-- [Function to call from this file]
-        "need_args": false, <-- [If command need arguments]
-        "args": [], <-- [Titles for needed commands]
-        "aliases":
-            "dev"
-        ], <-- [Words/Commands that trigger the module from the xmenu-console. Must include the Command Key!]
-        "content": "This is the developer command. This area is for testing and debugging.\n>> You can edit the file to develop new modules.\n>> Usage: 'dev'" <-- [Helptext]
-    }
-}
-```
+1. Öffne ein Terminal und bearbeite die Bash-Konfigurationsdatei:
+   ```bash
+   sudo nano /etc/bash.bashrc
+   ```
 
----
+2. Scrolle zum Ende der Datei und füge das Alias hinzu:
+   ```bash
+   alias xmenu="cd /path/to/your/xMenu && bash start.sh start"
+   ```
+   Ersetze `/path/to/your/xMenu` mit dem tatsächlichen Pfad zu deinem xMenu-Verzeichnis.
 
-### hosts.json
-```
-{
-    "host-name": { <-- [The name that will be displayed when a host need to be selected]
-        "ipadr": [
-            "192.168.0.35",
-            "192.168.0.133",
-            "192.168.191.67"
-        ], <-- [The saved IP addresses for the host (needed when Host should be used as external destination in 'sftp' or 'rsync']
-        "mac-addr": "dc:a6:32:f9:7d:42", <-- [MAC-Address, is currently not used anywhere, but WakeOnLan Module is planned]
-        "users": { <-- [Dictionary for saved users of this host, used to perform 'ssh', 'sftp' and 'rsync' with 'sshpass']
-            "Mumpi": { <-- [Displayname for the user, in selection menus]
-                "u": "pi", <-- [User]
-                "p": "ENC-nOKasdaAaf00uXYB+w==" <-- [Encrypted password]
-            }
-        },
-        "enc-keys": {}, <-- [Dictionary for encryption keys, not used currently]
-        "paths": { <-- [The paths for this host]
-            "as_runtime": [ <-- ['as_runtime' is used when a local path is needed by a module]
-                "/mnt"
-            ],
-            "as_ext_host": [ <-- ['as_ext_host' is used when a external path is needed by a module like 'rsync' or 'sftp']
-                "/mnt/Programming/subscripts/xmenu/Backups/",
-                "/mnt/Alpha_Shares/",
-                "/mnt"
-            ]
-        },
-        "commands": [ <-- [Saved commands for this host, that can be executed outside of this project]
-            "echo 'w0lFzk1nD is awesome!'",
-            "sudo systemctl status ssh"
-        ]
-    }
-}
-```
+3. Speichere die Datei und schließe den Editor:
+   - Drücke `CTRL + O`, dann `Enter`, um zu speichern.
+   - Drücke `CTRL + X`, um den Editor zu schließen.
 
----
+### Bash-Konfiguration neu laden
 
-### lang.json
+1. Lade die neue Bash-Konfiguration:
+   ```bash
+   source /etc/bash.bashrc
+   ```
 
-This config is for text and other visual elements within the project.
+### xMenu starten
 
----
+1. Starte xMenu mit dem neuen Alias:
+   ```bash
+   xmenu
+   ```
 
-### paths.json
+Wenn alles korrekt eingerichtet ist, sollte der Befehl `xmenu` das Skript `start.sh` im xMenu-Verzeichnis starten und das Projekt ausführen. Wenn du auf Probleme stößt oder Fehlermeldungen erhältst, lass es mich wissen, damit ich dir weiterhelfen kann.
 
-This config is the **dump** config, which can be used for all sorts of configs needed.
+### Tastenkombinationen-Einstellungen festlegen
 
-```
-{
-    "media": {
-        "valid_rename_extensions": [ <-- [Valid file extension for the blkrename module]
-            ".avi",
-            ".doc",
-            ".docx",
-            ".gif",
-            ".jpeg",
-            ".jpg",
-            ".mkv",
-            ".m4v",
-            ".mov",
-            ".mp3",
-            ".mp4",
-            ".mpeg",
-            ".pdf",
-            ".png",
-            ".rar",
-            ".txt",
-            ".wav",
-            ".zip"
-        ],
-        "rename_exclude_part": [ <-- [Parts that will raise a skip for a file when renaming with blkrename module]
-            ".part",
-            ".ydtl"
-        ],
-        "ytd_save_paths": [ <-- [Paths to save downloaded stuff from the ytdl module]
-            "Media/YouTube/Music/",
-            "Media/YouTube/Videos/",
-        ],
-        "ytd_path": "data/ytdl/", <-- [Path to ytdl things, like 'links.txt']
-        "core_paths": { <-- [Corepaths are used as default by most of the modules for a host]
-            "host": "/mnt/",
-        }
-    }
-}
-```
+### Schritt 1: Öffne die Tastenkombinationen-Einstellungen
+
+1. **Visual Studio Code öffnen**:
+   - Öffne Visual Studio Code.
+
+2. **Tastenkombinationen-Einstellungen öffnen**:
+   - Gehe zu `File > Preferences > Keyboard Shortcuts` oder drücke `Ctrl + K, Ctrl + S`.
+
+
+### Schritt 2: `keybindings.json`-Datei öffnen
+
+1. **`keybindings.json`-Datei öffnen**:
+   - Klicke auf das Symbol `Open Keyboard Shortcuts (JSON)` oben rechts, um die `keybindings.json`-Datei zu öffnen.
+
+
+### Schritt 3: Tastenkombination hinzufügen
+
+1. **Tastenkombination hinzufügen**:
+   - Füge den folgenden JSON-Code in die `keybindings.json`-Datei ein:
+
+     ```json
+     [
+         {
+             "key": "f5 + f6",
+             "command": "workbench.action.tasks.runTask",
+             "args": "Start xMenu"
+         }
+     ]
+     ```
+
+     - Falls die Datei bereits andere Einträge enthält, stelle sicher, dass du diese neue Konfiguration zu den bestehenden Einträgen hinzufügst und nicht den gesamten Inhalt ersetzt. Hier ist ein Beispiel, wie es aussehen könnte, wenn bereits andere Tastenkombinationen existieren:
+
+     ```json
+     [
+         {
+             "key": "f5 + f6",
+             "command": "workbench.action.tasks.runTask",
+             "args": "Start xMenu"
+         },
+         {
+             "key": "ctrl+shift+p",
+             "command": "workbench.action.showCommands"
+         }
+     ]
+     ```
+
+   
+
+2. **Datei speichern**:
+   - Speichere die Datei mit `Ctrl + S`.
+
+### Schritt 4: Task mit Tastenkombination testen
+
+1. **Visual Studio Code neu starten**:
+   - Starte Visual Studio Code neu, damit alle Änderungen wirksam werden.
+
+2. **Task mit Tastenkombination ausführen**:
+   - Drücke die zugewiesene Taste (z.B. `F12`), um den Task zu starten und zu prüfen, ob das Skript `start.sh` ausgeführt wird.
+
+Durch diese Schritte kannst du sicherstellen, dass die Tastenkombination korrekt eingerichtet ist, um den `xMenu`-Task in Visual Studio Code zu starten.
+
+
+### Wie kann man den starten?
+
+Man muss das Terminal öffnen und dort `F5` + `F6` drücken. Dann öffnet sich das Projekt und startet direkt. Sobald der Startvorgang abgeschlossen ist, muss man einmal die `Enter`-Taste drücken. Danach kann man das Terminal bedienen.
